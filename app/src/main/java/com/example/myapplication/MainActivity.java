@@ -8,7 +8,9 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
-    GridView gridView;
+    public void addEmp(){
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
