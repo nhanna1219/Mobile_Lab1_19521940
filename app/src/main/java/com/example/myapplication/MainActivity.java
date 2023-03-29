@@ -8,7 +8,6 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     ListView listView;
-    GridView gridView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,9 +17,5 @@ public class MainActivity extends AppCompatActivity {
         CustomListAdapter customAdapter = new CustomListAdapter(getApplicationContext());
         listView.setAdapter(customAdapter);
 
-        gridView = findViewById(R.id.gridView);
-        gridView.setNestedScrollingEnabled(false);
-        CustomGridAdapter customGridAdapter = new CustomGridAdapter(getApplicationContext());
-        gridView.setAdapter(customGridAdapter);
     }
 }
