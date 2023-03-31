@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static java.lang.Math.round;
+
 import android.widget.ListView;
 
 public class Employee {
@@ -7,10 +9,10 @@ public class Employee {
     private double gSalary;
     private double nSalary;
 
-    public Employee(String fullName, double gSalary, double nSalary) {
+    public Employee(String fullName, double gSalary) {
         this.fullName = fullName;
         this.gSalary = gSalary;
-        this.nSalary = nSalary;
+        this.nSalary = calSalary();
     }
 
     public String getFullName(){
@@ -36,7 +38,7 @@ public class Employee {
 
     public double calSalary(){
         double salary;
-        salary = gSalary - gSalary * 10.5;
+        salary = gSalary - gSalary * 0.105;
         if (salary <= 11000000) {
             nSalary = salary;
         }
