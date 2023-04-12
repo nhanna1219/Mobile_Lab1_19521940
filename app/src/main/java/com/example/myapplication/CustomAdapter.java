@@ -29,7 +29,7 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int i) {
-        return empS.get(i);
+        return null;
     }
 
     @Override
