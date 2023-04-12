@@ -6,26 +6,89 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <!--ListView-->
-        <ListView
-            android:id="@+id/customListView"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameWrapper"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            app:layout_constraintTop_toBottomOf="@+id/column" />
+            app:hintEnabled="true"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="5dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.core.widget.NestedScrollView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneWrapper"
+            android:layout_width="match_parent"
+            app:hintEnabled="true"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toBottomOf="@id/nameWrapper">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneSalary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:hint="Phone"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addLButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="50dp"
+            android:background="#61A8CA"
+            android:text="Add Local"
+            app:layout_constraintTop_toBottomOf="@id/phoneWrapper"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addFSButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="50dp"
+            android:background="#61A8CA"
+            android:text="Add FireStore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneWrapper"
+            app:layout_constraintLeft_toRightOf="@id/addLButton" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/queryLButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="50dp"
+            android:background="#61A8CA"
+            android:text="Query Local"
+            app:layout_constraintTop_toBottomOf="@id/addLButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/queryFSButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="50dp"
+            android:background="#61A8CA"
+            android:text="Query FireStore"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addFSButton"
+            app:layout_constraintLeft_toRightOf="@id/queryLButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
