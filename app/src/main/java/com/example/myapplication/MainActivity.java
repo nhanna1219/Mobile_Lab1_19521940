@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         userVM = new ViewModelProvider(this).get(UserVM.class);
+        TextInputLayout name_TI = findViewById(R.id.nameWrapper);
+        TextInputLayout phone_TI = findViewById(R.id.phoneWrapper);
 
         Button addLocal_bt = (Button) findViewById(R.id.addLButton);
         Button addFireStore_bt = (Button) findViewById(R.id.addFSButton);
@@ -35,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
         addLocal_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextInputLayout name_TI = findViewById(R.id.nameWrapper);
                 String name = Objects.requireNonNull(name_TI.getEditText()).getText().toString();
-                TextInputLayout phone_TI = findViewById(R.id.phoneWrapper);
                 String phone = Objects.requireNonNull(phone_TI.getEditText()).getText().toString();
                 User user = new User(name, phone);
                 userVM.insertUser(user);
