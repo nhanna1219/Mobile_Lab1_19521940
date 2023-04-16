@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="add_local">Add Local</string>
+    <string name="add_firestore">Add FireStore</string>
+    <string name="query_local">Query Local</string>
+    <string name="query_firestore">Query FireStore</string>
+    <string name="hi">hi</string>
+    <string name="result">Result:</string>
+    <string name="colon">:</string>
 </resources>
