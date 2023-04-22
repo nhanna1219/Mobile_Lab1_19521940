@@ -54,13 +54,13 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/addFSButton"
+            android:id="@+id/addSQLiteButton"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="50dp"
             android:background="#61A8CA"
-            android:text="@string/add_firestore"
+            android:text="@string/add_sqlite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/phoneWrapper"
             app:layout_constraintLeft_toRightOf="@id/addLButton" />
@@ -77,15 +77,15 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/queryFSButton"
+            android:id="@+id/querySQLiteButton"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="50dp"
             android:background="#61A8CA"
-            android:text="@string/query_firestore"
+            android:text="@string/query_sqlite"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/addFSButton"
+            app:layout_constraintTop_toBottomOf="@id/addSQLiteButton"
             app:layout_constraintLeft_toRightOf="@id/queryLButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

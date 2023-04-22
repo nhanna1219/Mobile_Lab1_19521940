@@ -9,4 +9,6 @@
     <string name="hi">hi</string>
     <string name="result">Result:</string>
     <string name="colon">:</string>
+    <string name="add_sqlite">Add SQLite</string>
+    <string name="query_sqlite">Query SQLite</string>
 </resources>
