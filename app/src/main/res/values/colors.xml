@@ -13,4 +13,8 @@
     <color name="blue_400">#00BCD4</color>
     <color name="blue_600">#03A9F4</color>
     <color name="blue_800">#2196F3</color>
+
+
+    <color name="title1">#3F88C4</color>
+    <color name="title2">#FF000000</color>
 </resources>
