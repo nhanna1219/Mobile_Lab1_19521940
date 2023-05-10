@@ -10,4 +10,7 @@
     <string name="fullname">Fullname</string>
     <string name="phone">Phone</string>
     <string name="back_to">Back to</string>
+    <string name="welcome_to_home_page">Welcome to Home Page</string>
+    <string name="name">Name</string>
+    <string name="log_out">Log Out</string>
 </resources>
