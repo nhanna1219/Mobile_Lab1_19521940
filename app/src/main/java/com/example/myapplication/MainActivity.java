@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -27,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         findViewsByIds();
         initVariables();
 
+        // HandelClickAnimationXML
         handleClickAnimationXML(btnFadeInXml, R.anim.anim_fade_in);
         handleClickAnimationXML(btnFadeOutXml, R.anim.anim_fade_out);
         handleClickAnimationXML(btnBlinkXml, R.anim.anim_blink);
@@ -38,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         handleClickAnimationXML(btnBounceXml, R.anim.anim_bounce);
         handleClickAnimationXML(btnCombineXml, R.anim.anim_combine);
 
+
+        // HandleClickAnimationCode
+        handleClickAnimationCode(btnFadeInCode, initFadeInAnimation());
+        handleClickAnimationCode(btnFadeOutCode, initFadeOutAnimation());
+        handleClickAnimationCode(btnBlinkCode, initBlinkAnimation());
     }
 
     private void handleClickAnimationXML(Button btn, int ani) {
@@ -50,6 +58,42 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void handleClickAnimationCode(Button btn, final Animation animation) {
+
+        // Handle onclickListenner to start animation
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ivUitLogo.startAnimation(animation);
+            }
+        });
+
+    }
+
+    private Animation initFadeOutAnimation() {
+        AlphaAnimation animation = new AlphaAnimation(1f, 0f);
+        animation.setDuration(500);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+        return animation;
+    }
+
+    private Animation initBlinkAnimation() {
+        AlphaAnimation animation = new AlphaAnimation(0f, 1f);
+        animation.setDuration(300);
+        animation.setRepeatMode(Animation.REVERSE);
+        animation.setRepeatCount(3);
+        return animation;
+    }
+    private Animation initFadeInAnimation() {
+        AlphaAnimation animation = new AlphaAnimation(0f, 1f);
+        animation.setDuration(500);
+        animation.setFillAfter(true);
+        animation.setAnimationListener(animationListener);
+       return animation;
+    }
+
     private void findViewsByIds() {
         ivUitLogo = (ImageView) findViewById(R.id.iv_uit_logo);
         btnFadeInXml = (Button) findViewById(R.id.btn_fade_in_xml);
