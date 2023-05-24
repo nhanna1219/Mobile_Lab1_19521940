@@ -28,4 +28,6 @@
     <string name="slide_up">Slide Up</string>
     <string name="bounce">Bounce</string>
     <string name="combine">Combine</string>
+    <string name="new_activity">New Activity</string>
+    <string name="back">BACK</string>
 </resources>

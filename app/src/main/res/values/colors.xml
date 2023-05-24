@@ -13,4 +13,6 @@
     <color name="blue_400">#00BCD4</color>
     <color name="blue_600">#03A9F4</color>
     <color name="blue_800">#2196F3</color>
+
+    <color name="pink">#AF2A83</color>
 </resources>
